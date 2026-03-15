@@ -16,7 +16,7 @@ export default function RecentActivityTimeline({ className = "" }: RecentActivit
     return (
         <div className={`rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-surface)] p-5 ${className}`}>
             <h3 className="mb-4 text-sm font-semibold text-[var(--color-text-primary)]">Recent Activity</h3>
-            <div>
+            <div className="stagger-children">
                 {mockEvents.map((event, i) => (
                     <TimelineEventCard key={i} {...event} />
                 ))}

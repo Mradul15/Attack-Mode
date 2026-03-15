@@ -23,7 +23,7 @@ export default function IntegrationStatusIndicator({
 
     return (
         <div className={`flex items-center gap-3 ${className}`}>
-            <span className={`inline-block h-2 w-2 rounded-full ${style.dot}`} />
+            <span className={`inline-block h-2 w-2 rounded-full ${style.dot} ${health === "connected" ? "animate-pulse-glow" : ""}`} />
             <span className="text-sm font-medium text-[var(--color-text-primary)]">{name}</span>
             <span className={`text-xs font-medium ${style.text}`}>{style.label}</span>
             {lastSync && (

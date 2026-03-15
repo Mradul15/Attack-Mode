@@ -22,7 +22,7 @@ export default function SystemHealthCard({ className = "" }: SystemHealthCardPro
                     {healthyCount}/{services.length} healthy
                 </span>
             </div>
-            <div className="space-y-3">
+            <div className="space-y-3 stagger-children">
                 {services.map((svc) => (
                     <div key={svc.name} className="flex items-center justify-between">
                         <IntegrationStatusIndicator name={svc.name} health={svc.health} />

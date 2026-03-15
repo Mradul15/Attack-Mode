@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls:*)",
+      "Bash(npx supabase:*)",
+      "Bash(SUPABASE_ACCESS_TOKEN=\"sbp_9684f3e9894e3531ca82bf29237a3c1c8ad6422e\" npx supabase:*)",
+      "Bash(SUPABASE_ACCESS_TOKEN=\"sbp_9684f3e9894e3531ca82bf29237a3c1c8ad6422e\" npx supabase db push:*)",
+      "Bash(SUPABASE_ACCESS_TOKEN=\"sbp_9684f3e9894e3531ca82bf29237a3c1c8ad6422e\" npx supabase db execute:*)",
+      "Read(//Users/mk/.gemini/antigravity/brain/6ec82c15-dfa5-4ede-ab5b-2785d1671543/**)",
+      "Bash(npx next build)"
+    ]
+  }
+}

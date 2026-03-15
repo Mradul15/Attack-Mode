@@ -13,12 +13,12 @@ export default function QuickActionsPanel({ className = "" }: QuickActionsPanelP
     return (
         <div className={`rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-surface)] p-5 ${className}`}>
             <h3 className="mb-4 text-sm font-semibold text-[var(--color-text-primary)]">Quick Actions</h3>
-            <div className="grid grid-cols-2 gap-2">
+            <div className="grid grid-cols-2 gap-2 stagger-children">
                 {actions.map((action) => (
                     <a
                         key={action.label}
                         href={action.href}
-                        className="flex items-center gap-2.5 rounded-lg border border-[var(--color-border)] bg-[var(--color-bg-root)] px-3 py-3 text-sm font-medium text-[var(--color-text-secondary)] transition-colors hover:border-[var(--color-accent)]/30 hover:text-[var(--color-text-primary)]"
+                        className="interactive-card flex items-center gap-2.5 rounded-lg border border-[var(--color-border)] bg-[var(--color-bg-root)] px-3 py-3 text-sm font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)]"
                     >
                         <span>{action.icon}</span>
                         {action.label}

@@ -1,18 +1,31 @@
-import { ReactNode } from "react";
+"use client";
+
+import { type ReactNode } from "react";
+import type { Permission } from "@/lib/types";
+import { usePermission } from "@/lib/auth/auth-context";
 
 interface PermissionGateProps {
-    allowed: boolean;
+    /** The permission string to check, e.g. "incident.create" */
+    permission: Permission;
     children: ReactNode;
+    /** Optional fallback to render when denied */
     fallback?: ReactNode;
+    /** Tooltip shown on disabled overlay */
     tooltip?: string;
 }
 
+/**
+ * Renders children only if the current user has the required permission.
+ * Otherwise shows a disabled overlay with tooltip, or the optional fallback.
+ */
 export default function PermissionGate({
-    allowed,
+    permission,
     children,
     fallback,
     tooltip = "You don't have permission to perform this action",
 }: PermissionGateProps) {
+    const allowed = usePermission(permission);
+
     if (allowed) return <>{children}</>;
 
     if (fallback) return <>{fallback}</>;

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useMe } from "@/lib/auth/auth-context";
 
 interface NavItem {
   label: string;
@@ -12,7 +13,7 @@ interface NavItem {
 const navItems: NavItem[] = [
   {
     label: "Dashboard",
-    href: "/",
+    href: "/dashboard",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="sidebar__icon">
         <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
@@ -78,15 +79,16 @@ const navItems: NavItem[] = [
 
 export default function Sidebar() {
   const pathname = usePathname();
+  const { signOut } = useMe();
 
   const isActive = (href: string) => {
-    if (href === "/") return pathname === "/";
+    if (href === "/dashboard") return pathname === "/dashboard";
     return pathname.startsWith(href);
   };
 
   return (
     <aside className="app-shell__sidebar sidebar">
-      <Link href="/" className="sidebar__logo">
+      <Link href="/dashboard" className="sidebar__logo">
         <span className="sidebar__logo-icon">⚡</span>
         Attack Mode
       </Link>
@@ -103,6 +105,16 @@ export default function Sidebar() {
           </Link>
         ))}
       </nav>
+
+      <div className="sidebar__footer">
+        <button
+          type="button"
+          onClick={() => signOut()}
+          className="sidebar__signout"
+        >
+          Sign out to view landing page
+        </button>
+      </div>
     </aside>
   );
 }

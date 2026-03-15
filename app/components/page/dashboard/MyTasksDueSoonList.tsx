@@ -13,9 +13,9 @@ export default function MyTasksDueSoonList({ className = "" }: MyTasksDueSoonLis
     return (
         <div className={`rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-surface)] p-5 ${className}`}>
             <h3 className="mb-4 text-sm font-semibold text-[var(--color-text-primary)]">My Tasks Due Soon</h3>
-            <div className="space-y-2">
+            <div className="space-y-2 stagger-children">
                 {mockTasks.map((task) => (
-                    <div key={task.id} className="flex items-center justify-between rounded-lg border border-[var(--color-border)] bg-[var(--color-bg-root)] px-3 py-2.5">
+                    <div key={task.id} className="flex items-center justify-between rounded-lg border border-[var(--color-border)] bg-[var(--color-bg-root)] px-3 py-2.5 transition-all hover:border-[var(--color-bg-active)] hover:shadow-[var(--shadow-sm)]">
                         <div className="flex items-center gap-3">
                             <div className="h-4 w-4 rounded border border-[var(--color-border)]" />
                             <span className="text-sm text-[var(--color-text-primary)]">{task.title}</span>

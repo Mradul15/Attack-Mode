@@ -20,9 +20,9 @@ export default function ActiveIncidentsCard({ className = "" }: ActiveIncidentsC
                     {mockIncidents.length} open
                 </span>
             </div>
-            <div className="space-y-3">
+            <div className="space-y-3 stagger-children">
                 {mockIncidents.map((inc) => (
-                    <div key={inc.id} className="flex items-center gap-3 rounded-lg border border-[var(--color-border)] bg-[var(--color-bg-root)] px-3 py-2.5">
+                    <div key={inc.id} className="interactive-card flex items-center gap-3 rounded-lg border border-[var(--color-border)] bg-[var(--color-bg-root)] px-3 py-2.5">
                         <SeverityBadge severity={inc.severity} />
                         <div className="flex-1 min-w-0">
                             <p className="truncate text-sm font-medium text-[var(--color-text-primary)]">{inc.title}</p>

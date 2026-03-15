@@ -1,6 +1,6 @@
 import PageShell from "@/app/components/PageShell";
 
-export default function RunbookDiffPage({ params }: { params: Promise<{ id: string }> }) {
+export default function RunbookDiffPage({ params: _params }: { params: Promise<{ id: string }> }) {
     return (
         <PageShell
             title="Runbook Diff"

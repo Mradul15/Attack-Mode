@@ -1,0 +1,81 @@
+{
+  "definitionVersion": "0.4.0",
+  "revisionHistory": ["initial"],
+  "sheetsById": {
+    "Intro Sequence": {
+      "sequence": {
+        "subUnitsPerUnit": 30,
+        "length": 4.8,
+        "tracksByObject": {
+          "intro": {
+            "trackData": {
+              "convergence_track": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "intro:convergence",
+                "keyframes": [
+                  { "id": "conv0", "position": 0, "connectedRight": true, "handles": [0.5, 1, 0.5, 0], "type": "bezier", "value": 0 },
+                  { "id": "conv1", "position": 1.8, "connectedRight": true, "handles": [0.5, 1, 0.5, 0], "type": "bezier", "value": 1 }
+                ]
+              },
+              "glowRadius_track": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "intro:glowRadius",
+                "keyframes": [
+                  { "id": "glow0", "position": 0, "connectedRight": true, "handles": [0.5, 1, 0.5, 0], "type": "bezier", "value": 0 },
+                  { "id": "glow1", "position": 3.0, "connectedRight": true, "handles": [0.5, 1, 0.5, 0], "type": "bezier", "value": 1 }
+                ]
+              },
+              "textReveal_track": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "intro:textReveal",
+                "keyframes": [
+                  { "id": "text0", "position": 0, "connectedRight": true, "handles": [0.5, 1, 0.5, 0], "type": "bezier", "value": 0 },
+                  { "id": "text1", "position": 2.4, "connectedRight": true, "handles": [0.5, 1, 0.5, 0], "type": "bezier", "value": 0 },
+                  { "id": "text2", "position": 3.2, "connectedRight": true, "handles": [0.5, 1, 0.5, 0], "type": "bezier", "value": 1 }
+                ]
+              },
+              "flashIntensity_track": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "intro:flashIntensity",
+                "keyframes": [
+                  { "id": "flash0", "position": 0, "connectedRight": true, "handles": [0.5, 1, 0.5, 0], "type": "bezier", "value": 0 },
+                  { "id": "flash1", "position": 4.0, "connectedRight": true, "handles": [0.5, 1, 0.5, 0], "type": "bezier", "value": 0 },
+                  { "id": "flash2", "position": 4.6, "connectedRight": true, "handles": [0.5, 1, 0.5, 0], "type": "bezier", "value": 1 }
+                ]
+              },
+              "shakeAmount_track": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "intro:shakeAmount",
+                "keyframes": [
+                  { "id": "shake0", "position": 0, "connectedRight": true, "handles": [0.5, 1, 0.5, 0], "type": "bezier", "value": 0 },
+                  { "id": "shake1", "position": 3.2, "connectedRight": true, "handles": [0.5, 1, 0.5, 0], "type": "bezier", "value": 0 },
+                  { "id": "shake2", "position": 4.0, "connectedRight": true, "handles": [0.5, 1, 0.5, 0], "type": "bezier", "value": 1 }
+                ]
+              },
+              "particleFade_track": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "intro:particleFade",
+                "keyframes": [
+                  { "id": "fade0", "position": 0, "connectedRight": true, "handles": [0.5, 1, 0.5, 0], "type": "bezier", "value": 1 },
+                  { "id": "fade1", "position": 4.0, "connectedRight": true, "handles": [0.5, 1, 0.5, 0], "type": "bezier", "value": 1 },
+                  { "id": "fade2", "position": 4.6, "connectedRight": true, "handles": [0.5, 1, 0.5, 0], "type": "bezier", "value": 0 }
+                ]
+              }
+            },
+            "trackIdByPropPath": {
+              "[\"convergence\"]": "convergence_track",
+              "[\"glowRadius\"]": "glowRadius_track",
+              "[\"textReveal\"]": "textReveal_track",
+              "[\"flashIntensity\"]": "flashIntensity_track",
+              "[\"shakeAmount\"]": "shakeAmount_track",
+              "[\"particleFade\"]": "particleFade_track"
+            }
+          }
+        }
+      },
+      "staticOverrides": {
+        "byObject": {}
+      }
+    }
+  }
+}
